@@ -13,4 +13,28 @@ storiesOf('Card', module)
     <Card title="Card" variant="success">
       Test content.
     </Card>
+  ))
+  .add('Warning Card component', () => (
+    <Card title="Card" variant="warning">
+      Test content.
+    </Card>
+  ))
+  .add('Danger Card component', () => (
+    <Card title="Card" variant="danger">
+      Test content.
+    </Card>
+  ))
+  .add('Attention Card component', () => (
+    <Card title="Card" variant="attention">
+      Test content.
+    </Card>
+  ))
+  .add('Card with Background', () => (
+    <Background variant="danger">
+      <div style={{ width: '60%', padding: 30 }}>
+        <Card title="Card" variant="danger">
+          Test content.
+      </Card>
+      </div>
+    </Background>
   ));
