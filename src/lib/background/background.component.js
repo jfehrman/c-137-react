@@ -1,31 +1,18 @@
 // @flow
 import React from 'react';
+import determineVariant from '../shared/determine-variant';
 
 import './background.component.scss';
 
 export type Props = {
   children?: React.Node,
   variant?: string,
+  className?: string,
 };
 
-export const determineVariant = (variant: string = 'default') => {
-  switch (variant) {
-    case 'success':
-      return '--success';
-    case 'warning':
-      return '--warning';
-    case 'danger':
-      return '--danger';
-    case 'attention':
-      return '--attention';
-    default:
-      return '';
-  }
-}
-
-const Background = ({ children, variant }: Props) => (
+const Background = ({ children, variant, className }: Props) => (
   <div
-    className={`background${determineVariant(variant)}`}
+    className={`background${determineVariant(variant)} ${className}`}
   >
     {children}
   </div>
