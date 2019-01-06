@@ -1,0 +1,37 @@
+@import '../shared/colors.scss';
+
+@mixin shared() {
+  background-color: $background-color;
+}
+
+@mixin colorIt($color) {
+  color: $color;
+  border: 3px solid $color;
+  border-radius: 5px;
+}
+
+.container {
+  @include shared();
+  @include colorIt($laser-blue);
+
+
+  &--success {
+    @include shared();
+    @include colorIt($neon-green);
+  }
+
+  &--warning {
+    @include shared();
+    @include colorIt($neon-orange);
+  }
+
+  &--danger {
+    @include shared();
+    @include colorIt($neon-red);
+  }
+
+  &--attention {
+    @include shared();
+    @include colorIt($neon-blue);
+  }
+}
