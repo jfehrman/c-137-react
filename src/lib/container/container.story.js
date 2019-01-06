@@ -27,4 +27,4 @@ storiesOf('Contaner', module)
         </Container>
       </div>
     </Background>
-  ))
+  ));
