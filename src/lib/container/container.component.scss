@@ -5,7 +5,8 @@
 }
 
 @mixin colorIt($color) {
-  color: $color;
+  //color: $color;
+  color: $text-white;
   border: 3px solid $color;
   border-radius: 5px;
 }
