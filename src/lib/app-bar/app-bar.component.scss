@@ -1,0 +1,53 @@
+@import '../shared/colors.scss';
+
+@mixin colorNormal($color) {
+  color: $color;
+  background-color: $background-color;
+  border-bottom: 2px solid $color;
+}
+
+@mixin colorInvert($color) {
+  color: $background-color;
+  background-color: $color;
+  overflow: hidden;
+}
+
+.app-bar {
+  @include colorNormal($laser-blue);
+
+  &--invert {
+    @include colorInvert($laser-blue);
+  }
+
+  &--success {
+    @include colorNormal($neon-green);
+
+    &--invert {
+      @include colorInvert($neon-green);
+    }
+  }
+
+  &--warning {
+    @include colorNormal($neon-orange);
+
+    &--invert {
+      @include colorInvert($neon-orange);
+    }
+  }
+
+  &--danger {
+    @include colorNormal($neon-red);
+
+    &--invert {
+      @include colorInvert($neon-red);
+    }
+  }
+
+  &--attention {
+    @include colorNormal($neon-blue);
+
+    &--invert {
+      @include colorInvert($neon-blue);
+    }
+  }
+}
