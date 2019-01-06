@@ -1,0 +1,11 @@
+@import '../shared/colors.scss';
+
+.card {
+  &__title{
+    padding: 0 10px;
+  }
+
+  &__content {
+    padding: 10px;
+  }
+}
