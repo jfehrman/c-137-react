@@ -1,4 +1,5 @@
 import React from 'react';
+import { action } from '@storybook/addon-actions';
 import { storiesOf } from '@storybook/react';
 import Button from './button.component';
 
@@ -25,6 +26,11 @@ storiesOf('Button', module)
   ))
   .add('Attention Button component', () => (
     <Button variant="attention">
+      Test!
+    </Button>
+  ))
+  .add('Button component click test', () => (
+    <Button variant="warning" onClick={action('Click')}>
       Test!
     </Button>
   ));
