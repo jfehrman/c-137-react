@@ -10,6 +10,11 @@
   background-color: $background-color;
   border-radius: 0px;
   animation: modalIn 3.5s;
+  font-family: "Lucida Console", Monaco, monospace;
+
+  &__content {
+    padding: 10px;
+  }
 
   ::-webkit-scrollbar {
     width: 0px;  /* remove scrollbar space */   
@@ -49,7 +54,6 @@
 .modal {
   @include shared();
   @include colorIt($laser-blue);
-
 
   &--success {
     @include shared();

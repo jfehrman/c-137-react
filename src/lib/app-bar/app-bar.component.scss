@@ -4,12 +4,14 @@
   color: $color;
   background-color: $background-color;
   border-bottom: 2px solid $color;
+  font-family: "Lucida Console", Monaco, monospace;
 }
 
 @mixin colorInvert($color) {
   color: $background-color;
   background-color: $color;
   overflow: hidden;
+  font-family: "Lucida Console", Monaco, monospace;
 }
 
 .app-bar {

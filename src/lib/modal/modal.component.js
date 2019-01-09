@@ -23,7 +23,9 @@ const Modal = ({ children, variant, className, title, isVisible }: Props) => {
         <AppBar invert variant={variant}>
           <h3>{title}</h3>
         </AppBar>
-        {children}
+        <div className="modal__content">
+          {children}
+        </div>
       </div>
     </div>
   ) : null;
