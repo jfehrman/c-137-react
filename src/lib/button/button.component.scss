@@ -24,7 +24,7 @@
 
   &--warning {
     @include shared();
-    @include colorIt($neon-orange);
+    @include colorIt($neon-yellow);
   }
 
   &--danger {
