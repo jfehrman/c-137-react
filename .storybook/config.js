@@ -1,4 +1,5 @@
-import { configure } from '@storybook/react';
+import { addParameters, configure } from '@storybook/react';
+import { themes } from '@storybook/theming';
 
 const req = require.context('../src/lib', true, /\.story\.js$/);
 
@@ -17,5 +18,12 @@ const sortByFileName = (filePath1, filePath2) => {
 function loadStories() {
   req.keys().sort(sortByFileName).forEach(fileName => req(fileName))
 }
+
+addParameters({
+  options: {
+    name: 'C-137 React Storybook',
+    theme: themes.dark,
+  },
+});
 
 configure(loadStories, module);
