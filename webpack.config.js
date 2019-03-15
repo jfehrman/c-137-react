@@ -9,7 +9,9 @@ var config = {
   entry: ['@babel/polyfill', APP_DIR + '/index.js'],
   output: {
     path: BUILD_DIR,
-    filename: 'index.js'
+    filename: 'index.js',
+    library: 'default',
+    libraryTarget: 'commonjs2'
   },
   module : {
     rules: [
